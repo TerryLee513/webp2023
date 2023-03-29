@@ -1,13 +1,3 @@
-var count = c.length;
-function deleteOldData(){
-var myTable = document.getElementById(“csie”);
-if(count>0){
-myTable.deleteRow(-1);
-count--;
-}
-}
-4:57
-
 <head>
     <title>資工選課表</title>
 </head>
@@ -42,17 +32,11 @@ count--;
     }
 </style>
 <script>
-    /*
-    //換名字
-    function changeText(){
-        document.getElementById(“csie”).rows[1].cells[2].innerHTML=“張哲嚴”
-    }
-    */
     var d = ["資工系", "資工系", "資工系", "資工系", "資工系", "資工系"];
     var c = ["物件導向軟體設計", "計算機網路實驗", "作業系統實務", "生物統計", "通訊系統", "軟硬體專題(2)"];
     var t = ["黃崇源", "李春良", "張哲維", "陳光武", "陳仁輝", "魏志達"];
     var count = c.length;
-    //動態新增內容
+    
     function addNewData() {
         var myTable = document.getElementById("csie");
         var rowCount = c.length;
@@ -64,7 +48,7 @@ count--;
             row.insertCell(2).innerHTML = t[i];
         }
     }
-    //動態刪除內容
+    
     function deleteOldData() {
         var myTable = document.getElementById("csie");
         if (count > 0) {
